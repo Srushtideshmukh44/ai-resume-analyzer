@@ -4,9 +4,10 @@ pipeline {
     stages {
 
         stage('Clone Repository') {
-            steps {
-                git 'https://github.com/srushtideshmukh44/ai-resume-analyzer.git'
-            }
+    steps {
+        git branch: 'main', url: 'https://github.com/srushtideshmukh44/ai-resume-analyzer.git'
+    }
+}
         }
 
         stage('Build Backend Docker Image') {
