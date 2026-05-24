@@ -11,19 +11,19 @@ pipeline {
 
         stage('Build Backend Docker Image') {
             steps {
-                bat 'docker build -t ai-backend ./backend'
+                sh 'docker build -t ai-backend ./backend'
             }
         }
 
         stage('Build Frontend Docker Image') {
             steps {
-                bat 'docker build -t ai-frontend ./frontend'
+                sh 'docker build -t ai-frontend ./frontend'
             }
         }
 
         stage('Docker Compose Up') {
             steps {
-                bat 'docker-compose up -d'
+                sh 'docker-compose up -d'
             }
         }
     }
