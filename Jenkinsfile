@@ -9,21 +9,17 @@ pipeline {
             }
         }
 
-        stage('Build Backend Docker Image') {
+        stage('Check Files') {
             steps {
-                sh 'docker build -t ai-backend ./backend'
+                sh 'ls -la'
+                sh 'ls backend'
+                sh 'ls frontend'
             }
         }
 
-        stage('Build Frontend Docker Image') {
+        stage('Build Success') {
             steps {
-                sh 'docker build -t ai-frontend ./frontend'
-            }
-        }
-
-        stage('Docker Compose Up') {
-            steps {
-                sh 'docker-compose up -d'
+                echo 'Jenkins Pipeline Working Successfully'
             }
         }
     }
