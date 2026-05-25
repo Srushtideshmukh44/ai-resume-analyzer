@@ -1,6 +1,5 @@
 
-# AI Resume Analyzer Project
-# 🚀 AI Resume Analyzer – End-to-End DevOps Project
+#  AI Resume Analyzer – End-to-End DevOps Project
 
 ## 📌 Project Overview
 
